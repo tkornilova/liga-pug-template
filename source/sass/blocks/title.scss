@@ -2,15 +2,13 @@
   font-weight: 600;
   color: inherit;
 
-  margin: 0;
-
   &--h1 {
     font-size: 52px;
     line-height: 54px;
 
     text-transform: uppercase;
 
-    @include vp-1439 {
+    @include vp-1023 {
       font-size: 36px;
       line-height: 40px;
     }
@@ -25,14 +23,9 @@
     font-size: 44px;
     line-height: 48px;
 
-    @include vp-1439 {
-      font-size: 30px;
-      line-height: 32px;
-    }
-
     @include vp-1023 {
-      font-size: 36px;
-      line-height: 40px;
+      font-size: 28px;
+      line-height: 32px;
     }
 
     @include vp-767 {
