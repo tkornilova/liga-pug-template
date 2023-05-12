@@ -1,0 +1,16 @@
+.page-content {
+  padding: 28px 0 60px;
+  margin: 0 auto;
+
+  @include vp-1439 {
+    padding: 20px 0 48px;
+  }
+
+  @include vp-1023 {
+    padding: 20px 0 32px;
+  }
+
+  @include vp-743 {
+    padding: 16px 0 32px;
+  }
+}
