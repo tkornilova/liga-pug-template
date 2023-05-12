@@ -1,6 +1,6 @@
-import {removeScroll, addScroll} from './utils-maps';
+import {removeScroll, addScroll, addPin} from './utils-maps';
 
-export const mapData1 = {
+export const mapData = {
   id: 'map-1',
   center: [40.76767820708949, -73.97180998839444],
   zoom: 16,
@@ -38,4 +38,7 @@ export const initMap = (data) => {
   window.addEventListener('resize', () => {
     removeDesktopResize(map);
   });
+
+  // Добавляет пины
+  addPin(map);
 };
