@@ -9,4 +9,10 @@ export const initMap = (data) => {
     center: data.center,
     zoom: data.zoom,
   });
+
+  let baloon = new ymaps.Placemark(data.center, {}, {
+
+  });
+
+  map.geoObjects.add(baloon);
 };
