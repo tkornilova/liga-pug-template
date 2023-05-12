@@ -1649,6 +1649,51 @@ button,
   overflow: hidden;
 }
 
+.title {
+  font-weight: 600;
+  color: inherit;
+  margin: 0;
+}
+.title--h1 {
+  font-size: 52px;
+  line-height: 54px;
+  text-transform: uppercase;
+}
+@media (max-width: 1439px) {
+  .title--h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .title--h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+.title--h2 {
+  font-size: 44px;
+  line-height: 48px;
+}
+@media (max-width: 1439px) {
+  .title--h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 1023px) {
+  .title--h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .title--h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
