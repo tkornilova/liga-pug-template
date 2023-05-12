@@ -1593,6 +1593,62 @@ button,
   color: #ff0000;
 }
 
+.page-content {
+  padding: 28px 0 60px;
+  margin: 0 auto;
+}
+@media (max-width: 1439px) {
+  .page-content {
+    padding: 20px 0 48px;
+  }
+}
+@media (max-width: 1023px) {
+  .page-content {
+    padding: 20px 0 32px;
+  }
+}
+@media (max-width: 767px) {
+  .page-content {
+    padding: 16px 0 32px;
+  }
+}
+
+.page-section {
+  padding: 60px 0 0;
+}
+@media (max-width: 1439px) {
+  .page-section {
+    padding: 48px 0 0;
+  }
+}
+.page-section--no-padding-top {
+  padding: 0;
+}
+@media (max-width: 1439px) {
+  .page-section--no-padding-top {
+    padding: 0;
+  }
+}
+@media (max-width: 1023px) {
+  .page-section--no-padding-top {
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .page-section--no-padding-top {
+    padding: 0;
+  }
+}
+
+.map__wrapper {
+  width: 100%;
+  height: 600px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px 5px rgb(221, 221, 221);
+          box-shadow: 0 0 10px 5px rgb(221, 221, 221);
+  overflow: hidden;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
