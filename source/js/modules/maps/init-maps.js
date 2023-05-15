@@ -1,4 +1,4 @@
-import {removeScroll, addScroll, addPin} from './utils-maps';
+import {removeScroll, addScroll} from './utils-maps';
 
 export const mapData = {
   id: 'map-1',
@@ -7,10 +7,15 @@ export const mapData = {
 };
 
 export const initMap = (data) => {
+  let ymaps = window.ymaps;
+
   // Создает карту
   let map = new ymaps.Map(data.id, {
     center: data.center,
     zoom: data.zoom,
+    behaviors: ['default', 'scrollZoom'],
+  }, {
+    searchControlProvider: 'yandex#search',
   });
 
   // Кастомизирует и подключает новый baloon
@@ -39,6 +44,33 @@ export const initMap = (data) => {
     removeDesktopResize(map);
   });
 
-  // Добавляет пины
-  addPin(map);
+  // Добавляет пин на карту
+  const addPin = (pinData) => {
+    let layout = ymaps.templateLayoutFactory.createClass('<div></div>');
+
+    let pin = new ymaps.Placemark(pinData.coordinates, {
+      balloonContent: pinData.title,
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: pinData.img,
+      iconImageSize: [45, 45],
+      iconImageOffset: [-20, -30],
+      iconContentLayout: layout,
+    });
+
+    map.geoObjects.add(pin);
+  };
+
+  // Получает данные из JSON файла и переносит их на карту
+  const getPinData = () => {
+    fetch('./../../../data/pins.json')
+        .then((response) => response.json())
+        .then((pins) => {
+          for (let i = 0; i < pins.length; i++) {
+            addPin(pins[i]);
+          }
+        });
+  };
+
+  getPinData();
 };

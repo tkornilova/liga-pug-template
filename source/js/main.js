@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    let ymaps = window.ymaps;
     ymaps.ready(initMap(mapData));
   });
 });
