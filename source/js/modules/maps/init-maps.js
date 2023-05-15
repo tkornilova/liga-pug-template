@@ -72,5 +72,5 @@ export const initMap = (data) => {
         });
   };
 
-  getPinData();
+  ymaps.ready(getPinData());
 };
