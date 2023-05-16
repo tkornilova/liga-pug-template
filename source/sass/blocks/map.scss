@@ -6,4 +6,12 @@
   box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 
   overflow: hidden;
+
+  @include vp-1023 {
+    height: 400px;
+  }
+
+  @include vp-767 {
+    height: 300px;
+  }
 }
