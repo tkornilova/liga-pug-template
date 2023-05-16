@@ -3,7 +3,7 @@
     "coordinates": [40.76767820708949, -73.97180998839444],
     "zoom": 16,
     "id": "map-2",
-    "img": "img/content/baloon.png",
+    "img": "img/content/center/baloon-1.png",
     "imgSize": [60, 60],
     "imgOffset": [-30, -56]
   },
@@ -12,67 +12,67 @@
     {
       "title": "Башня Трампа",
       "coordinates": [40.76203924736625,-73.97393644061553],
-      "img": "img/content/building.png"
+      "img": "img/content/pins/building.png"
     },
     {
       "title": "Музей современного испусства",
       "coordinates": [40.761082766799845,-73.97684876058192],
-      "img": "img/content/binoculars.png"
+      "img": "img/content/pins/binoculars.png"
     },
     {
       "title": "Олимпик Тауэр",
       "coordinates": [40.75912485208859,-73.97623721692652],
-      "img": "img/content/building.png"
+      "img": "img/content/pins/building.png"
     },
     {
       "title": "Метрополитен Опера",
       "coordinates": [40.772665059439454,-73.98464736746054],
-      "img": "img/content/binoculars.png"
+      "img": "img/content/pins/binoculars.png"
     },
     {
       "title": "Театр Вивианы Бомон",
       "coordinates": [40.77352781724079,-73.98448345926282],
-      "img": "img/content/binoculars.png"
+      "img": "img/content/pins/binoculars.png"
     },
     {
       "title": "Станция: 50 улица",
       "coordinates": [40.7612766125774,-73.98422324451143],
-      "img": "img/content/subway.png"
+      "img": "img/content/pins/subway.png"
     },
     {
       "title": "Станция: 59 улица",
       "coordinates": [40.76860282479176,-73.98148154184324],
-      "img": "img/content/subway.png"
+      "img": "img/content/pins/subway.png"
     },
     {
       "title": "Станция: 66 улица",
       "coordinates": [40.77359467501565,-73.98225401803951],
-      "img": "img/content/subway.png"
+      "img": "img/content/pins/subway.png"
     },
     {
       "title": "Станция: 72 улица",
       "coordinates": [40.77873948986607,-73.98180434547858],
-      "img": "img/content/subway.png"
+      "img": "img/content/pins/subway.png"
     },
     {
       "title": "Станция: 79 улица",
       "coordinates": [40.783434741861306,-73.97997375984772],
-      "img": "img/content/subway.png"
+      "img": "img/content/pins/subway.png"
     },
     {
       "title": "Станция: 86 улица",
       "coordinates": [40.787887271602514,-73.97654053230865],
-      "img": "img/content/subway.png"
+      "img": "img/content/pins/subway.png"
     },
     {
       "title": "Станция: 96 улица",
       "coordinates": [40.793881538522506,-73.97204762057459],
-      "img": "img/content/subway.png"
+      "img": "img/content/pins/subway.png"
     },
     {
       "title": "Станция: 103 улица",
       "coordinates": [40.79898144196023,-73.96836239763506],
-      "img": "img/content/subway.png"
+      "img": "img/content/pins/subway.png"
     }
   ]
 }
