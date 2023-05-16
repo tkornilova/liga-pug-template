@@ -43,7 +43,7 @@ export const showOverlay = (map) => {
     }
   });
 
-  document.getElementById(map.center.id).addEventListener('mouseout', () => {
+  overlay.addEventListener('mouseleave', () => {
     overlay.style.display = 'none';
   });
 };

@@ -1688,7 +1688,7 @@ button,
   font-size: 40px;
   line-height: 44px;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 10;
+  z-index: 2;
 }
 .map__overlay p {
   max-width: 90%;
