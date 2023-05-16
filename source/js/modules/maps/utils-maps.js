@@ -33,3 +33,17 @@ export const removeActiveState = (buttons) => {
 export const addActiveState = (button) => {
   button.classList.add('active');
 };
+
+export const showOverlay = (map) => {
+  const overlay = document.querySelector('.map__overlay');
+
+  document.getElementById(map.center.id).addEventListener('wheel', () => {
+    if (window.innerWidth > 1024) {
+      overlay.style.display = 'flex';
+    }
+  });
+
+  document.getElementById(map.center.id).addEventListener('mouseout', () => {
+    overlay.style.display = 'none';
+  });
+};

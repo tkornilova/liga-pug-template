@@ -5,7 +5,8 @@
     "id": "map-2",
     "img": "img/content/center/baloon-3.png",
     "imgSize": [60, 60],
-    "imgOffset": [-30, -56]
+    "imgOffset": [-30, -56],
+    "isOverlay": false
   },
 
   "pins": [

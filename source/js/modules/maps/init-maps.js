@@ -1,4 +1,11 @@
-import {removeScroll, addScroll, addPlacemark, removeActiveState, addActiveState} from './utils-maps';
+import {
+  removeScroll,
+  addScroll,
+  addPlacemark,
+  removeActiveState,
+  addActiveState,
+  showOverlay
+} from './utils-maps';
 
 export const map1 = document.getElementById('map-1');
 export const map2 = document.getElementById('map-2');
@@ -91,6 +98,11 @@ const composeMap = (mapData) => {
 
   if (filterBtns) {
     filterPins();
+  }
+
+  // При скролле показывает overlay
+  if (mapData.center.isOverlay) {
+    showOverlay(mapData);
   }
 
   // Убирает ресайз на десктопе (начальный размер экрана)
