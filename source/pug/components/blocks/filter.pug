@@ -3,7 +3,7 @@ mixin filter(buttons = [])
     .container
       ul.filter__list
         li.filter__item
-          +btn({text: "Смотреть все"})(data-type="all").filter__button.filter__button--all
+          +btn({text: "Смотреть все"})(data-type="all").filter__button.filter__button--active
         each button in buttons
           li.filter__item
             +btn({text: button.text})(data-type=button.type).filter__button

@@ -716,7 +716,7 @@ button,
   display: inline-flex;
   padding: 20px;
   color: #4b442f;
-  background-color: #ffc92b;
+  background-color: #ffe081;
   border-radius: 12px;
   border: none;
   cursor: pointer;
@@ -1747,16 +1747,49 @@ button,
 
 .filter__list {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
   max-width: 60%;
   padding: 0;
   margin: 0 auto;
 }
+@media (max-width: 1023px) {
+  .filter__list {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .filter__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+  }
+}
+.filter__item {
+  min-width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.filter__button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.filter__button--active {
+  background-color: #ffc92b;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {

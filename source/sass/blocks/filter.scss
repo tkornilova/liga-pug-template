@@ -2,16 +2,40 @@
   &__list {
     list-style: none;
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 40px;
 
     max-width: 60%;
 
     padding: 0;
     margin: 0 auto;
+
+    @include vp-1023 {
+      max-width: 100%;
+    }
+
+    @include vp-767 {
+      grid-template-columns:repeat(2, 1fr);
+      gap: 20px 30px;
+    }
   }
 
   &__item {
+    min-width: 20%;
 
+    display: flex;
+  }
+
+  &__button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--active {
+      background-color: $color-sunglow;
+    }
   }
 }
