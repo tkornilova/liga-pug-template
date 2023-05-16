@@ -51,7 +51,7 @@ const composeMap = (mapData) => {
     map.geoObjects.add(baloon);
   }
 
-  // Добавляет пин на карту
+  // Добавляет пин в переменную placemarks
   let placemarks = new ymaps.GeoObjectCollection();
 
   const addPins = (pins) => {
@@ -64,6 +64,7 @@ const composeMap = (mapData) => {
     map.geoObjects.add(placemarks);
   };
 
+  // Добавляет пины (placemarks) на карту
   if (mapData.pins) {
     addPins(mapData.pins);
   }
@@ -100,12 +101,12 @@ const composeMap = (mapData) => {
     filterPins();
   }
 
-  // При скролле показывает overlay
+  // Показывает overlay при скролле
   if (mapData.center.isOverlay) {
     showOverlay(mapData);
   }
 
-  // Убирает ресайз на десктопе (начальный размер экрана)
+  // Убирает ресайз на десктопе (проверка размера начального экрана)
   const removeDesktopResize = (mapName) => {
     if (window.innerWidth > 1024) {
       removeScroll(mapName);
@@ -116,7 +117,7 @@ const composeMap = (mapData) => {
 
   removeDesktopResize(map);
 
-  // Убирает ресайз на десктопе (при изменении ширины экрана)
+  // Убирает ресайз на десктопе (проверка при изменении ширины экрана)
   window.addEventListener('resize', () => {
     removeDesktopResize(map);
   });
