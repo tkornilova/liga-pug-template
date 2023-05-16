@@ -1,6 +1,6 @@
 {
   "center": {
-    "coordinates": [40.76767820708949, -73.97180998839444],
+    "coordinates": [41.89762091118029,12.498453112141474],
     "zoom": 16,
     "id": "map-2",
     "img": "img/content/center/baloon-1.png",
@@ -10,80 +10,68 @@
 
   "pins": [
     {
-      "title": "Башня Трампа",
-      "coordinates": [40.76203924736625,-73.97393644061553],
+      "title": "Палаццо Барберини",
+      "coordinates": [41.90333178546861,12.489970015744861],
       "img": "img/content/pins/building.png",
       "type": "building"
     },
     {
-      "title": "Музей современного испусства",
-      "coordinates": [40.761082766799845,-73.97684876058192],
-      "img": "img/content/pins/binoculars.png",
-      "type": "theatre"
-    },
-    {
-      "title": "Олимпик Тауэр",
-      "coordinates": [40.75912485208859,-73.97623721692652],
+      "title": "Аула Оттагона",
+      "coordinates": [41.90382871295488,12.495999621610322],
       "img": "img/content/pins/building.png",
       "type": "building"
     },
     {
-      "title": "Метрополитен Опера",
-      "coordinates": [40.772665059439454,-73.98464736746054],
+      "title": "Национальный музей Рима",
+      "coordinates": [41.901424188932666,12.498381423215543],
       "img": "img/content/pins/binoculars.png",
       "type": "theatre"
     },
     {
-      "title": "Театр Вивианы Бомон",
-      "coordinates": [40.77352781724079,-73.98448345926282],
+      "title": "Римский оперный театр",
+      "coordinates": [41.90070281393743,12.495591925840062],
       "img": "img/content/pins/binoculars.png",
       "type": "theatre"
     },
     {
-      "title": "Станция: 50 улица",
-      "coordinates": [40.7612766125774,-73.98422324451143],
+      "title": "Театр Элизео",
+      "coordinates": [41.89794548273786,12.488618182401343],
+      "img": "img/content/pins/binoculars.png",
+      "type": "theatre"
+    },
+    {
+      "title": "Станция: Кавур",
+      "coordinates": [41.894791371679496,12.493343562121131],
       "img": "img/content/pins/subway.png",
       "type": "subway"
     },
     {
-      "title": "Станция: 59 улица",
-      "coordinates": [40.76860282479176,-73.98148154184324],
+      "title": "Станция: Коллизей",
+      "coordinates": [41.89167432964075,12.491571582782083],
       "img": "img/content/pins/subway.png",
       "type": "subway"
     },
     {
-      "title": "Станция: 66 улица",
-      "coordinates": [40.77359467501565,-73.98225401803951],
+      "title": "Станция: Виктор Эммануил",
+      "coordinates": [41.895350490461325,12.502681237631785],
       "img": "img/content/pins/subway.png",
       "type": "subway"
     },
     {
-      "title": "Станция: 72 улица",
-      "coordinates": [40.77873948986607,-73.98180434547858],
+      "title": "Станция: Термини",
+      "coordinates": [41.901194964353785,12.500170689993855],
       "img": "img/content/pins/subway.png",
       "type": "subway"
     },
     {
-      "title": "Станция: 79 улица",
-      "coordinates": [40.783434741861306,-73.97997375984772],
+      "title": "Станция: Республика",
+      "coordinates": [41.90263769493168,12.496072274619092],
       "img": "img/content/pins/subway.png",
       "type": "subway"
     },
     {
-      "title": "Станция: 86 улица",
-      "coordinates": [40.787887271602514,-73.97654053230865],
-      "img": "img/content/pins/subway.png",
-      "type": "subway"
-    },
-    {
-      "title": "Станция: 96 улица",
-      "coordinates": [40.793881538522506,-73.97204762057459],
-      "img": "img/content/pins/subway.png",
-      "type": "subway"
-    },
-    {
-      "title": "Станция: 103 улица",
-      "coordinates": [40.79898144196023,-73.96836239763506],
+      "title": "Станция: Барберини",
+      "coordinates": [41.90379665323464,12.488704013089816],
       "img": "img/content/pins/subway.png",
       "type": "subway"
     }
