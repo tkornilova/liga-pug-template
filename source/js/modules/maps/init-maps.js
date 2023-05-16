@@ -1,4 +1,4 @@
-import {removeScroll, addScroll, addPlacemark} from './utils-maps';
+import {removeScroll, addScroll, addPlacemark, removeActiveState, addActiveState} from './utils-maps';
 
 export const map1 = document.getElementById('map-1');
 export const map2 = document.getElementById('map-2');
@@ -67,9 +67,15 @@ const composeMap = (mapData) => {
   const filterPins = () => {
     filterBtns.forEach((button) => {
       button.addEventListener('click', () => {
+        // Меняет активное состояние кнопки
+        removeActiveState(filterBtns);
+        addActiveState(button);
+
+        // Убирает все пины
         placemarks.removeAll();
         let layout = ymaps.templateLayoutFactory.createClass('<div></div>');
 
+        // Проверяет на соответствие пины
         if (button.dataset.type === 'all') {
           addPins(mapData.pins);
         } else {

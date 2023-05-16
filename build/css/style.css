@@ -736,17 +736,17 @@ button,
 }
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
     -webkit-box-shadow: 0 0 10px 5px rgb(221, 221, 221);
             box-shadow: 0 0 10px 5px rgb(221, 221, 221);
   }
 }
 .btn.focus-visible:focus {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-box-shadow: 0 0 10px 5px rgb(221, 221, 221);
           box-shadow: 0 0 10px 5px rgb(221, 221, 221);
 }
@@ -1786,7 +1786,7 @@ button,
       -ms-flex-pack: center;
           justify-content: center;
 }
-.filter__button--active {
+.filter__button.active {
   background-color: #ffc92b;
 }
 

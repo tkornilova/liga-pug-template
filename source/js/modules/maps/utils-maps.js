@@ -23,3 +23,13 @@ export const addPlacemark = (pinData, layout, placemarks) => {
 
   placemarks.add(pin);
 };
+
+export const removeActiveState = (buttons) => {
+  buttons.forEach((button) => {
+    button.classList.remove('active');
+  });
+};
+
+export const addActiveState = (button) => {
+  button.classList.add('active');
+};
