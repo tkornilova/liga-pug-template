@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
-import {getMapData, map1, map2} from './modules/maps/init-maps';
+import {getMapData, map1, map2, map3} from './modules/maps/init-maps';
 
 // ---------------------------------
 
@@ -13,7 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   getMapData(map1);
   getMapData(map2);
+  getMapData(map3);
   iosVhFix();
+
 
   // Modules
   // ---------------------------------

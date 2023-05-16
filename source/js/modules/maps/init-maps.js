@@ -1,7 +1,8 @@
-import {removeScroll, addScroll} from './utils-maps';
+import {removeScroll, addScroll, addPlacemark} from './utils-maps';
 
 export const map1 = document.getElementById('map-1');
 export const map2 = document.getElementById('map-2');
+export const map3 = document.getElementById('map-3');
 
 // Получает данные из JSON файла и переносит их на карту
 export const getMapData = (map) => {
@@ -44,26 +45,46 @@ const composeMap = (mapData) => {
   }
 
   // Добавляет пин на карту
+  let placemarks = new ymaps.GeoObjectCollection();
+
   const addPins = (pins) => {
     let layout = ymaps.templateLayoutFactory.createClass('<div></div>');
 
     for (let i = 0; i < pins.length; i++) {
-      let pin = new ymaps.Placemark(pins[i].coordinates, {
-        balloonContent: pins[i].title,
-      }, {
-        iconLayout: 'default#imageWithContent',
-        iconImageHref: pins[i].img,
-        iconImageSize: [45, 45],
-        iconImageOffset: [-20, -30],
-        iconContentLayout: layout,
-      });
-
-      map.geoObjects.add(pin);
+      addPlacemark(pins[i], layout, placemarks);
     }
+
+    map.geoObjects.add(placemarks);
   };
 
   if (mapData.pins) {
     addPins(mapData.pins);
+  }
+
+  // Фильтрация пинов на карте
+  const filterBtns = document.querySelectorAll('.filter__button');
+
+  const filterPins = () => {
+    filterBtns.forEach((button) => {
+      button.addEventListener('click', () => {
+        placemarks.removeAll();
+        let layout = ymaps.templateLayoutFactory.createClass('<div></div>');
+
+        if (button.dataset.type === 'all') {
+          addPins(mapData.pins);
+        } else {
+          for (let i = 0; i < mapData.pins.length; i++) {
+            if (mapData.pins[i].type === button.dataset.type) {
+              addPlacemark(mapData.pins[i], layout, placemarks);
+            }
+          }
+        }
+      });
+    });
+  };
+
+  if (filterBtns) {
+    filterPins();
   }
 
   // Убирает ресайз на десктопе (начальный размер экрана)
