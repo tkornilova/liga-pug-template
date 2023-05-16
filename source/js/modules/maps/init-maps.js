@@ -1,32 +1,70 @@
 import {removeScroll, addScroll} from './utils-maps';
 
-export const mapData = {
-  id: 'map-1',
-  center: [40.76767820708949, -73.97180998839444],
-  zoom: 16,
+export const map1 = document.getElementById('map-1');
+export const map2 = document.getElementById('map-2');
+
+// Получает данные из JSON файла и переносит их на карту
+export const getMapData = (map) => {
+  if (!map) {
+    return;
+  }
+
+  fetch(map.dataset.url)
+      .then((response) => response.json())
+      .then((data) => {
+        let ymaps = window.ymaps;
+        ymaps.ready(function () {
+          composeMap(data);
+        });
+      });
 };
 
-export const initMap = (data) => {
+const composeMap = (mapData) => {
   let ymaps = window.ymaps;
 
   // Создает карту
-  let map = new ymaps.Map(data.id, {
-    center: data.center,
-    zoom: data.zoom,
+  let map = new ymaps.Map(mapData.center.id, {
+    center: mapData.center.coordinates,
+    zoom: mapData.center.zoom,
     behaviors: ['default', 'scrollZoom'],
   }, {
     searchControlProvider: 'yandex#search',
   });
 
   // Кастомизирует и подключает новый baloon
-  let baloon = new ymaps.Placemark(data.center, {}, {
-    iconLayout: 'default#image',
-    iconImageHref: 'img/content/baloon.png',
-    iconImageSize: [60, 60],
-    iconImageOffset: [-29, -56],
-  });
+  if (mapData.center.img) {
+    let baloon = new ymaps.Placemark(mapData.center.coordinates, {}, {
+      iconLayout: 'default#image',
+      iconImageHref: mapData.center.img,
+      iconImageSize: mapData.center.imgSize,
+      iconImageOffset: mapData.center.imgOffset,
+    });
 
-  map.geoObjects.add(baloon);
+    map.geoObjects.add(baloon);
+  }
+
+  // Добавляет пин на карту
+  const addPins = (pins) => {
+    let layout = ymaps.templateLayoutFactory.createClass('<div></div>');
+
+    for (let i = 0; i < pins.length; i++) {
+      let pin = new ymaps.Placemark(pins[i].coordinates, {
+        balloonContent: pins[i].title,
+      }, {
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: pins[i].img,
+        iconImageSize: [45, 45],
+        iconImageOffset: [-20, -30],
+        iconContentLayout: layout,
+      });
+
+      map.geoObjects.add(pin);
+    }
+  };
+
+  if (mapData.pins) {
+    addPins(mapData.pins);
+  }
 
   // Убирает ресайз на десктопе (начальный размер экрана)
   const removeDesktopResize = (mapName) => {
@@ -43,34 +81,4 @@ export const initMap = (data) => {
   window.addEventListener('resize', () => {
     removeDesktopResize(map);
   });
-
-  // Добавляет пин на карту
-  const addPin = (pinData) => {
-    let layout = ymaps.templateLayoutFactory.createClass('<div></div>');
-
-    let pin = new ymaps.Placemark(pinData.coordinates, {
-      balloonContent: pinData.title,
-    }, {
-      iconLayout: 'default#imageWithContent',
-      iconImageHref: pinData.img,
-      iconImageSize: [45, 45],
-      iconImageOffset: [-20, -30],
-      iconContentLayout: layout,
-    });
-
-    map.geoObjects.add(pin);
-  };
-
-  // Получает данные из JSON файла и переносит их на карту
-  const getPinData = () => {
-    fetch('./../../../data/pins.json')
-        .then((response) => response.json())
-        .then((pins) => {
-          for (let i = 0; i < pins.length; i++) {
-            addPin(pins[i]);
-          }
-        });
-  };
-
-  ymaps.ready(getPinData());
 };

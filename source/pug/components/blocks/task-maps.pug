@@ -2,6 +2,7 @@ mixin task-maps(options = {})
   - const title = options.title || false;
   - const mapId = options.id || false;
   - const tasks = options.tasks || false;
+  - const url = options.url || false;
 
   .task-maps&attributes(attributes)
     .container
@@ -10,4 +11,4 @@ mixin task-maps(options = {})
         each task in tasks
           li.task-maps__task
             p.task-maps__text!=task
-      +map()(id=mapId)
+      +map()(id=mapId, data-url=url)
