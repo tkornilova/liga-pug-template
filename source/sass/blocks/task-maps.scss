@@ -12,7 +12,9 @@
   }
 
   &__tasks {
-    padding-left: 30px;
+    list-style: none;
+
+    padding-left: 40px;
     margin: 0 0 40px;
 
     @include vp-1023 {
@@ -26,7 +28,19 @@
   }
 
   &__task {
+    position: relative;
+
     margin: 0 0 10px;
+
+    &::before {
+      content: url("../../img/content/check.png");
+      width: 15px;
+      height: 15px;
+
+      position: absolute;
+      left: -45px;
+      top: -4px;
+    }
   }
 
   &__text {

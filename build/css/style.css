@@ -1713,7 +1713,8 @@ button,
   }
 }
 .task-maps__tasks {
-  padding-left: 30px;
+  list-style: none;
+  padding-left: 40px;
   margin: 0 0 40px;
 }
 @media (max-width: 1023px) {
@@ -1728,7 +1729,16 @@ button,
   }
 }
 .task-maps__task {
+  position: relative;
   margin: 0 0 10px;
+}
+.task-maps__task::before {
+  content: url("../../img/content/check.png");
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: -45px;
+  top: -4px;
 }
 .task-maps__text {
   font-style: italic;
