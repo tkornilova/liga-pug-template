@@ -1,16 +1,18 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 20px;
 
-  color: $color-default-white;
+  color: $color-onion;
 
-  background-color: $color-neon-blue;
+  background-color: $color-sunglow;
+  border-radius: 12px;
   border: none;
   cursor: pointer;
 
-  transition: opacity $trans-default;
+  transition: transform $trans-default, box-shadow $trans-default;
 
   &--red {
+    color: $color-default-white;
     background-color: $color-torch-red;
   }
 
@@ -21,6 +23,7 @@
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
   }
 }

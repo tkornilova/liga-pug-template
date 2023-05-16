@@ -1,0 +1,9 @@
+mixin filter(buttons = [])
+  .filter&attributes(attributes)
+    .container
+      ul.filter__list
+        li.filter__item.filter__item--all
+          +btn({text: "Смотреть все"})
+        each button in buttons
+          li.filter__item
+            +btn({text: button.text})

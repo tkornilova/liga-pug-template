@@ -8,6 +8,18 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "test-1.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  -
+    const buttons = [
+      {
+        text: "Здания",
+      },
+      {
+        text: "Театры",
+      },
+      {
+        text: "Станции метро",
+      },
+    ]
 
 block main
   main
@@ -18,5 +30,7 @@ block main
           id: 'map-1',
           tasks: ['Реализовать карту через API Яндекс карт;', 'Настроить кастомный пин на карте так, что бы его стрелочка четко указывала на центр координат, которые вы можете придумать сами;', 'На десктопной версии при скролле колесиком мышки, карта не должна масштабироваться;'],
         })
+      +page-section()
+        +filter(buttons)
 
 block modals
