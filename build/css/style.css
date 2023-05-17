@@ -1700,6 +1700,20 @@ button,
   }
 }
 
+.ymaps-2-1-79-balloon__layout {
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15), 0 5px 15px -7px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15), 0 5px 15px -7px rgba(0, 0, 0, 0.5);
+}
+.ymaps-2-1-79-balloon__tail {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.ymaps-2-1-79-balloon.ymaps-2-1-79-balloon_layout_normal {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .title {
   font-weight: 600;
   color: inherit;
