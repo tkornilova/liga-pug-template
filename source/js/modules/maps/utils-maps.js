@@ -29,6 +29,27 @@ export const addPlacemark = (pinData, layout, placemarks) => {
   placemarks.add(pin);
 };
 
+export const initClusterer = (pins, map) => {
+  let ymaps = window.ymaps;
+
+  let clusterer = new ymaps.Clusterer({
+    clusterDisableClickZoom: true,
+  });
+
+  for (let i = 0; i < pins.length; i++) {
+    let pin = new ymaps.Placemark(pins[i].coordinates, {
+      balloonContent: pins[i].title,
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: pins[i].img,
+      iconImageSize: [45, 45],
+      iconImageOffset: [-20, -30],
+    });
+    clusterer.add(pin);
+  }
+  map.geoObjects.add(clusterer);
+};
+
 export const removeActiveState = (buttons) => {
   buttons.forEach((button) => {
     button.classList.remove('active');

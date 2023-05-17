@@ -2,6 +2,7 @@ import {
   removeScroll,
   addScroll,
   addPlacemark,
+  initClusterer,
   removeActiveState,
   addActiveState,
   crtlZoom
@@ -60,8 +61,10 @@ const composeMap = (mapData) => {
     map.geoObjects.add(placemarks);
   };
 
-  // Добавляет пины (placemarks) на карту
-  if (mapData.pins) {
+  // Добавляет пины (placemarks) или кластер (clusterer) на карту
+  if (mapData.map.hasClusterer) {
+    initClusterer(mapData.pins, map);
+  } else if (mapData.pins) {
     addPins(mapData.pins);
   }
 
