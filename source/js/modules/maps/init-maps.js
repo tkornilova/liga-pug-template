@@ -4,7 +4,7 @@ import {
   addPlacemark,
   removeActiveState,
   addActiveState,
-  showOverlay
+  crtlZoom
 } from './utils-maps';
 
 export const map1 = document.getElementById('map-1');
@@ -103,7 +103,7 @@ const composeMap = (mapData) => {
 
   // Показывает overlay при скролле
   if (mapData.center.isOverlay) {
-    showOverlay(mapData);
+    crtlZoom(mapData, map);
   }
 
   // Убирает ресайз на десктопе (проверка размера начального экрана)

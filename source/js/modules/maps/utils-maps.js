@@ -34,16 +34,47 @@ export const addActiveState = (button) => {
   button.classList.add('active');
 };
 
-export const showOverlay = (map) => {
+export const crtlZoom = (mapData, map) => {
   const overlay = document.querySelector('.map__overlay');
 
-  document.getElementById(map.center.id).addEventListener('wheel', () => {
+  // Добавляет overlay при скролле (без нажатия control)
+  document.getElementById(mapData.center.id).addEventListener('wheel', () => {
     if (window.innerWidth > 1024) {
       overlay.style.display = 'flex';
+      removeScroll(map);
     }
   });
 
+  // Убирает overlay, когда мышка не на карте
   overlay.addEventListener('mouseleave', () => {
     overlay.style.display = 'none';
+    removeScroll(map);
+  });
+
+  // Убирает overlay и добавляет скролл при нажатии на control
+  window.addEventListener('keydown', (evt) => {
+    if (evt.keyCode === 17) {
+      document.getElementById(mapData.center.id).addEventListener('wheel', () => {
+        if (window.innerWidth > 1024) {
+          overlay.style.display = 'none';
+          addScroll(map);
+        }
+      });
+    }
+  });
+
+  // Добавляет overlay и убирает скролл при отпускании control
+  window.addEventListener('keyup', (evt) => {
+    if (evt.keyCode === 17) {
+      overlay.style.display = 'flex';
+      removeScroll(map);
+
+      document.getElementById(mapData.center.id).addEventListener('wheel', () => {
+        if (window.innerWidth > 1024) {
+          overlay.style.display = 'flex';
+          removeScroll(map);
+        }
+      });
+    }
   });
 };
