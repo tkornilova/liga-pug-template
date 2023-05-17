@@ -1,12 +1,15 @@
 {
+  "map": {
+    "isOverlay": false
+  },
+
   "center": {
     "coordinates": [41.89762091118029,12.498453112141474],
     "zoom": 16,
     "id": "map-2",
     "img": "img/content/center/baloon-3.png",
     "imgSize": [60, 60],
-    "imgOffset": [-30, -56],
-    "isOverlay": false
+    "imgOffset": [-30, -56]
   },
 
   "pins": [

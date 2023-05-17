@@ -102,7 +102,7 @@ const composeMap = (mapData) => {
   }
 
   // Показывает overlay при скролле
-  if (mapData.center.isOverlay) {
+  if (mapData.map.isOverlay) {
     crtlZoom(mapData, map);
   }
 
