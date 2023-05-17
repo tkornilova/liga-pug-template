@@ -3,16 +3,19 @@ export const map2 = document.getElementById('map-2');
 export const map3 = document.getElementById('map-3');
 export const map4 = document.getElementById('map-4');
 
+// Убирает скролл с карты
 export const removeScroll = (mapName) => {
   mapName.behaviors.disable('scrollZoom');
   mapName.behaviors.disable('drag');
 };
 
+// Добавляет скролл карте
 export const addScroll = (mapName) => {
   mapName.behaviors.enable('scrollZoom');
   mapName.behaviors.enable('drag');
 };
 
+// Добавляет пин на карту
 export const addPlacemark = (pinData, layout, placemarks) => {
   let ymaps = window.ymaps;
 
@@ -31,6 +34,7 @@ export const addPlacemark = (pinData, layout, placemarks) => {
   placemarks.add(pin);
 };
 
+// Добавляет кластеры с пинами на карту
 export const initClusterer = (pins, map) => {
   let ymaps = window.ymaps;
 
@@ -54,16 +58,19 @@ export const initClusterer = (pins, map) => {
   map.geoObjects.add(clusterer);
 };
 
+// Убирает класс active с элемента
 export const removeActiveState = (buttons) => {
   buttons.forEach((button) => {
     button.classList.remove('active');
   });
 };
 
+// Добавляет класс active элементу
 export const addActiveState = (button) => {
   button.classList.add('active');
 };
 
+// Дает скроллить при нажатом control
 export const crtlZoom = (mapData, map) => {
   const overlay = document.querySelector('.map__overlay');
 

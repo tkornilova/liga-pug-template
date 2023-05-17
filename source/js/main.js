@@ -12,24 +12,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-  getMapData(map1);
-  getMapData(map2);
-  getMapData(map3);
-  getMapData(map4);
+
+  // Убирает проблемы с vh на iOS
   iosVhFix();
 
 
   // Modules
   // ---------------------------------
 
+  // Инициализирует карты
+  getMapData(map1);
+  getMapData(map2);
+  getMapData(map3);
+  getMapData(map4);
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+
+    // Инициализирует модальное окно
     initModals();
+    // Проверяет и загружает файл
     uploadFile();
+    // Проверяет и загружает картинку
     uploadImageDrop();
+    // Добавляет кастомный селект
     const select = new CustomSelect();
     select.init();
+    // Проверка формы при отправке
     const form = new Form();
     window.form = form;
     form.init();
