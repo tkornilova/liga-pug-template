@@ -7,9 +7,9 @@
     "coordinates": [41.89762091118029,12.498453112141474],
     "zoom": 16,
     "id": "map-2",
-    "img": "img/content/center/baloon-3.png",
+    "img": "img/content/center/baloon-4.png",
     "imgSize": [60, 60],
-    "imgOffset": [-30, -56]
+    "imgOffset": [-30, -44]
   },
 
   "pins": [

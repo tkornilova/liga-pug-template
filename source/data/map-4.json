@@ -1,0 +1,107 @@
+{
+  "map": {
+    "isOverlay": true
+  },
+
+  "center": {
+    "coordinates": [55.75142925553851,37.618874349182136],
+    "zoom": 16,
+    "id": "map-4",
+    "img": "img/content/center/baloon-3.png",
+    "imgSize": [60, 60],
+    "imgOffset": [-29, -58]
+  },
+
+  "pins": [
+    {
+      "title": "Большой Крмелевский сквер",
+      "coordinates": [55.750648680410706,37.6204193015747],
+      "img": "img/content/pins/park.png",
+      "type": "park"
+    },
+    {
+      "title": "Тайницский сад",
+      "coordinates": [55.74930532834994,37.61775855023193],
+      "img": "img/content/pins/park.png",
+      "type": "park"
+    },
+    {
+      "title": "Александровский сад",
+      "coordinates": [55.75172233186225,37.61363230690629],
+      "img": "img/content/pins/park.png",
+      "type": "park"
+    },
+    {
+      "title": "Парк Зарядье",
+      "coordinates": [55.75090921818075,37.62776592462546],
+      "img": "img/content/pins/park.png",
+      "type": "park"
+    },
+    {
+      "title": "Репинский сквер",
+      "coordinates": [55.74480030276504,37.61754307855612],
+      "img": "img/content/pins/park.png",
+      "type": "park"
+    },
+    {
+      "title": "Станция: Библиотека им. Ленина",
+      "coordinates": [55.75096886144636,37.6103736203121],
+      "img": "img/content/pins/subway.png",
+      "type": "subway"
+    },
+    {
+      "title": "Станция: Боровицкая",
+      "coordinates": [55.75024273695119,37.608850125591665],
+      "img": "img/content/pins/subway.png",
+      "type": "subway"
+    },
+    {
+      "title": "Станция: Александровский сад",
+      "coordinates": [55.75199751457968,37.60968697480429],
+      "img": "img/content/pins/subway.png",
+      "type": "subway"
+    },
+    {
+      "title": "Станция: Арбатская",
+      "coordinates": [55.75219114035837,37.60438692979088],
+      "img": "img/content/pins/subway.png",
+      "type": "subway"
+    },
+    {
+      "title": "Станция: Охотный ряд",
+      "coordinates": [55.756610705159325,37.61577570525102],
+      "img": "img/content/pins/subway.png",
+      "type": "subway"
+    },
+    {
+      "title": "Станция: Театральная",
+      "coordinates": [55.75728794715411,37.61940695976776],
+      "img": "img/content/pins/subway.png",
+      "type": "subway"
+    },
+    {
+      "title": "Станция: Площадь Революции",
+      "coordinates": [55.756102129733684,37.6231405947165],
+      "img": "img/content/pins/subway.png",
+      "type": "subway"
+    },
+    {
+      "title": "Оружейная палата",
+      "coordinates": [55.749108314971025,37.61346537881448],
+      "img": "img/content/pins/building.png",
+      "type": "building"
+    },
+    {
+      "title": "Триумф",
+      "coordinates": [55.754456608137474,37.62441690900045],
+      "img": "img/content/pins/building.png",
+      "type": "building"
+    },
+    {
+      "title": "Флорариум",
+      "coordinates": [55.75125503667626,37.6287852294985],
+      "img": "img/content/pins/building.png",
+      "type": "building"
+    }
+  ]
+}
