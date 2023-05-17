@@ -1,4 +1,9 @@
 .page-section {
+  background-color: $color-default-white;
+
+  position: relative;
+  z-index: 2;
+
   padding: 60px 0 0;
 
   @include vp-1439 {

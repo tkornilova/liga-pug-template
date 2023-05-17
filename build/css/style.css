@@ -1643,6 +1643,9 @@ button,
 }
 
 .page-section {
+  background-color: #ffffff;
+  position: relative;
+  z-index: 2;
   padding: 60px 0 0;
 }
 @media (max-width: 1439px) {
@@ -1930,6 +1933,7 @@ button,
   height: 100vh;
   background-image: url("../../img/content/intro.jpg");
   padding: 300px 0 0;
+  z-index: 1;
 }
 .intro .title {
   margin: 0 0 40px;
@@ -1962,6 +1966,10 @@ button,
 }
 .intro__link:hover::after, .intro__link:focus::after, .intro__link:active::after {
   width: 100%;
+}
+
+.loader-task {
+  min-height: 200px;
 }
 
 /* @mixin hover-focus {
