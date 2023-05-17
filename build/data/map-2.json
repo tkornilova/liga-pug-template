@@ -1,6 +1,7 @@
 {
   "map": {
-    "isOverlay": false
+    "isOverlay": false,
+    "hasClusterer": false
   },
 
   "center": {
@@ -17,66 +18,77 @@
       "title": "Палаццо Барберини",
       "coordinates": [41.90333178546861,12.489970015744861],
       "img": "img/content/pins/building.png",
+      "description": "Дворец (палаццо) знатной семьи Барберини на улице Четырёх фонтанов (via delle Quattro Fontane) на Квиринальском холме в центре Рима.",
       "type": "building"
     },
     {
       "title": "Аула Оттагона",
       "coordinates": [41.90382871295488,12.495999621610322],
       "img": "img/content/pins/building.png",
+      "description": "Бывший планетарий, в котором хранятся скульптуры из Терм Диоклетиана и из других термальных комплексов.",
       "type": "building"
     },
     {
       "title": "Национальный музей Рима",
       "coordinates": [41.901424188932666,12.498381423215543],
       "img": "img/content/pins/binoculars.png",
+      "description": "Один из крупнейших музеев города Рима.",
       "type": "museum"
     },
     {
       "title": "Римский оперный театр",
       "coordinates": [41.90070281393743,12.495591925840062],
       "img": "img/content/pins/theatre.png",
+      "description": "Иногда называют «Театр Костанци», в честь создателя Доменико Костанци (1810-1898).",
       "type": "theatre"
     },
     {
-      "title": "Театр Элизео",
+      "title": "Театр Елизео",
       "coordinates": [41.89794548273786,12.488618182401343],
       "img": "img/content/pins/theatre.png",
+      "description": "Современный «Елизео» представляет собой площадку, открытую для всех направлений драматургии.",
       "type": "theatre"
     },
     {
       "title": "Станция: Кавур",
       "coordinates": [41.894791371679496,12.493343562121131],
       "img": "img/content/pins/subway.png",
+      "description": "Станция метро в Риме.",
       "type": "subway"
     },
     {
       "title": "Станция: Коллизей",
       "coordinates": [41.89167432964075,12.491571582782083],
       "img": "img/content/pins/subway.png",
+      "description": "Станция метро в Риме.",
       "type": "subway"
     },
     {
       "title": "Станция: Виктор Эммануил",
       "coordinates": [41.895350490461325,12.502681237631785],
       "img": "img/content/pins/subway.png",
+      "description": "Станция метро в Риме.",
       "type": "subway"
     },
     {
       "title": "Станция: Термини",
       "coordinates": [41.901194964353785,12.500170689993855],
       "img": "img/content/pins/subway.png",
+      "description": "Станция метро в Риме.",
       "type": "subway"
     },
     {
       "title": "Станция: Республика",
       "coordinates": [41.90263769493168,12.496072274619092],
       "img": "img/content/pins/subway.png",
+      "description": "Станция метро в Риме.",
       "type": "subway"
     },
     {
       "title": "Станция: Барберини",
       "coordinates": [41.90379665323464,12.488704013089816],
       "img": "img/content/pins/subway.png",
+      "description": "Станция метро в Риме.",
       "type": "subway"
     }
   ]

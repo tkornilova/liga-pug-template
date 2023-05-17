@@ -1,6 +1,7 @@
 {
   "map": {
-    "isOverlay": false
+    "isOverlay": false,
+    "hasClusterer": false
   },
 
   "center": {

@@ -17,7 +17,9 @@ export const addPlacemark = (pinData, layout, placemarks) => {
   let ymaps = window.ymaps;
 
   let pin = new ymaps.Placemark(pinData.coordinates, {
-    balloonContent: pinData.title,
+    balloonContentHeader: pinData.title,
+    balloonContentBody: pinData.description,
+    balloonContentFooter: `Тип иконки: ${pinData.type}`,
   }, {
     iconLayout: 'default#imageWithContent',
     iconImageHref: pinData.img,
@@ -38,7 +40,9 @@ export const initClusterer = (pins, map) => {
 
   for (let i = 0; i < pins.length; i++) {
     let pin = new ymaps.Placemark(pins[i].coordinates, {
-      balloonContent: pins[i].title,
+      balloonContentHeader: pins[i].title,
+      balloonContentBody: pins[i].description,
+      balloonContentFooter: `Тип иконки: ${pins[i].type}`,
     }, {
       iconLayout: 'default#imageWithContent',
       iconImageHref: pins[i].img,
