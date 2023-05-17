@@ -351,6 +351,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
+  position: relative;
 }
 
 a {
@@ -1851,7 +1852,86 @@ button,
 }
 .filter__button.active {
   background-color: #ffc92b;
-} /* @mixin hover-focus {
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffe081;
+  z-index: 100;
+}
+.loader.hidden {
+  display: none;
+}
+.loader__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 18%;
+}
+@media (max-width: 1023px) {
+  .loader__wrapper {
+    margin-top: 28%;
+  }
+}
+@media (max-width: 767px) {
+  .loader__wrapper {
+    margin-top: 38%;
+  }
+}
+.loader__circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 20px solid #fb4273;
+  border-top: 20px solid #ffffff;
+  -webkit-animation: loader 3s infinite linear;
+          animation: loader 3s infinite linear;
+  margin: 0 0 130px 70px;
+}
+.loader__text {
+  font-size: 38px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #fb4273;
+  text-align: center;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: translate(-20%, 50%) rotate(0deg);
+            transform: translate(-20%, 50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-20%, 50%) rotate(360deg);
+            transform: translate(-20%, 50%) rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: translate(-20%, 50%) rotate(0deg);
+            transform: translate(-20%, 50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-20%, 50%) rotate(360deg);
+            transform: translate(-20%, 50%) rotate(360deg);
+  }
+}
+/* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
         @content;
