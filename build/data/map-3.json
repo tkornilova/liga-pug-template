@@ -23,7 +23,7 @@
       "title": "Музей современного испусства",
       "coordinates": [40.761082766799845,-73.97684876058192],
       "img": "img/content/pins/binoculars.png",
-      "type": "theatre"
+      "type": "museum"
     },
     {
       "title": "Олимпик Тауэр",
@@ -34,13 +34,13 @@
     {
       "title": "Метрополитен Опера",
       "coordinates": [40.772665059439454,-73.98464736746054],
-      "img": "img/content/pins/binoculars.png",
+      "img": "img/content/pins/theatre.png",
       "type": "theatre"
     },
     {
       "title": "Театр Вивианы Бомон",
       "coordinates": [40.77352781724079,-73.98448345926282],
-      "img": "img/content/pins/binoculars.png",
+      "img": "img/content/pins/theatre.png",
       "type": "theatre"
     },
     {

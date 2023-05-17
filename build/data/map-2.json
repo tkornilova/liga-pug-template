@@ -29,18 +29,18 @@
       "title": "Национальный музей Рима",
       "coordinates": [41.901424188932666,12.498381423215543],
       "img": "img/content/pins/binoculars.png",
-      "type": "theatre"
+      "type": "museum"
     },
     {
       "title": "Римский оперный театр",
       "coordinates": [41.90070281393743,12.495591925840062],
-      "img": "img/content/pins/binoculars.png",
+      "img": "img/content/pins/theatre.png",
       "type": "theatre"
     },
     {
       "title": "Театр Элизео",
       "coordinates": [41.89794548273786,12.488618182401343],
-      "img": "img/content/pins/binoculars.png",
+      "img": "img/content/pins/theatre.png",
       "type": "theatre"
     },
     {
