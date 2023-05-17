@@ -1756,16 +1756,6 @@ button,
   padding-left: 40px;
   margin: 0 0 40px;
 }
-@media (max-width: 1023px) {
-  .task-maps__tasks {
-    margin: 0 0 30px;
-  }
-}
-@media (max-width: 767px) {
-  .task-maps__tasks {
-    margin: 0 0 20px;
-  }
-}
 .task-maps__task {
   position: relative;
   margin: 0 0 10px;
