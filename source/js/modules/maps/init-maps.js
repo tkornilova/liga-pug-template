@@ -7,11 +7,6 @@ import {
   crtlZoom
 } from './utils-maps';
 
-export const map1 = document.getElementById('map-1');
-export const map2 = document.getElementById('map-2');
-export const map3 = document.getElementById('map-3');
-export const map4 = document.getElementById('map-4');
-
 // Получает данные из JSON файла и переносит их на карту
 export const getMapData = (map) => {
   if (!map) {
