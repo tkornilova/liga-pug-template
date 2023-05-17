@@ -1,10 +1,8 @@
-mixin intro()
-  .intro
-    //- вставлять блоки во внешний контейнер неверно
-    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+mixin intro(list = [])
+  .intro&attributes(attributes)
     .container
-      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
-
-      p(style="margin-top: 40px;") Пример использования +img()
-      p(style="margin-bottom: 40px;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+      +title({tag: 'h1', text: 'Перейти к разделу:'}).title--h2
+      ul.intro__list
+        each item in list
+          li.intro__item
+            a(href=item.href aria-label="Перейти к разделу").intro__link!= item.text

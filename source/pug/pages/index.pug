@@ -8,9 +8,39 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  -
+    const links = [
+      {
+        href: "#",
+        text: "Меню",
+      },
+      {
+        href: "#",
+        text: "Лоадер",
+      },
+      {
+        href: "#",
+        text: "Сборка первого экрана",
+      },
+      {
+        href: "#",
+        text: "Появление блоков",
+      },
+      {
+        href: "#",
+        text: "Паралакс",
+      },
+      {
+        href: "#",
+        text: "Слайдер по скроллу",
+      },
+    ]
 
 block main
   main
     +loader()
+    +page-content()
+      +page-section().page-section--no-padding-top
+        +intro(links)
 
 block modals

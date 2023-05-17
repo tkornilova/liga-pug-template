@@ -1758,12 +1758,6 @@ button,
 }
 @media (max-width: 1023px) {
   .title--h2 {
-    font-size: 28px;
-    line-height: 32px;
-  }
-}
-@media (max-width: 767px) {
-  .title--h2 {
     font-size: 30px;
     line-height: 32px;
   }
@@ -1931,6 +1925,45 @@ button,
             transform: translate(-20%, 50%) rotate(360deg);
   }
 }
+.intro {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../img/content/intro.jpg");
+  padding: 300px 0 0;
+}
+.intro .title {
+  margin: 0 0 40px;
+}
+.intro__list {
+  list-style: none;
+  padding-right: 40px;
+  margin: 0;
+}
+.intro__item {
+  margin: 0 0 20px;
+}
+.intro__link {
+  font-size: 28px;
+  line-height: 30px;
+  position: relative;
+}
+.intro__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  -webkit-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+.intro__link:hover::after, .intro__link:focus::after, .intro__link:active::after {
+  width: 100%;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {

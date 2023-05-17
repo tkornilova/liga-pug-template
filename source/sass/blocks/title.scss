@@ -24,11 +24,6 @@
     line-height: 48px;
 
     @include vp-1023 {
-      font-size: 28px;
-      line-height: 32px;
-    }
-
-    @include vp-767 {
       font-size: 30px;
       line-height: 32px;
     }
