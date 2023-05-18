@@ -1,0 +1,6 @@
+mixin slider-task(slides)
+  .slider-task&attributes(attributes)
+    .container
+      .slider-task__wrapper
+        +title({tag: 'h2', text: 'Scroll Slider - переключение полноэкранных слайдов по скроллу'})
+        +slider(slides)

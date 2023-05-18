@@ -36,6 +36,36 @@ block variables
       },
     ]
 
+    const slides = [
+      {
+        text: ['Сиба-ину&nbsp;&mdash; порода охотничьих собак, выведенная на&nbsp;японском острове Хонсю, самая мелкая из&nbsp;шести пород исконно японского происхождения.'],
+        img: 'slider-1',
+        width: '300',
+        height: '300',
+      },
+      {
+        text: ['Обычный сибий окрас - рыжий.'],
+        img: 'slider-2',
+        width: '300',
+        height: '300',
+      },
+      {
+        text: ['Но бывают и беляши.'],
+        img: 'slider-3',
+        width: '300',
+        height: '300',
+      },
+      {
+        text: ['И даже черныши!'],
+        img: 'slider-4',
+        width: '300',
+        height: '300',
+      },
+      {
+        text: ['Спсибо за внимание :)'],
+      },
+    ]
+
 block main
   main
     +loader()
@@ -45,11 +75,7 @@ block main
       +page-section()
         +loader-task()
       +page-section()
-        +loader-task()
-      +page-section()
-        +loader-task()
-      +page-section()
-        +loader-task()
+        +slider-task(slides)
 
 
 block modals

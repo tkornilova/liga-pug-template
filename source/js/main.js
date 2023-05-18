@@ -6,7 +6,8 @@ import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {map1, map2, map3, map4} from './modules/maps/utils-maps';
 import {getMapData} from './modules/maps/init-maps';
 import {initLoader} from './modules/init-loader';
-import { initIntroAnimation } from './modules/init-intro-animation';
+import {initIntroAnimation} from './modules/init-intro-animation';
+import {initSliderAnimation} from './modules/init-slider-animation';
 
 // ---------------------------------
 
@@ -18,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Инициализирует загрузочный экран при прогрузке страницы
   setTimeout(initLoader, 1700);
   initIntroAnimation();
+  initSliderAnimation();
   // Убирает проблемы с vh на iOS
   iosVhFix();
 

@@ -1,0 +1,11 @@
+mixin slider(data = [])
+  .slider&attributes(attributes)
+    ul.slider__list
+      each slider in data
+        li.slider__item
+          .slider__text
+            each text in slider.text
+              p!=slider.text
+          if (slider.img)
+            .slider__wrapper
+              +img('content', slider.img, 'jpg', slider.width, slider.height, 'Картинка').slider__img
