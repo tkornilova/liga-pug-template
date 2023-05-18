@@ -8,6 +8,8 @@
 
   background-color: $color-default-black-40;
 
+  z-index: 2;
+
   &__text {
     color: $color-default-white;
     font-size: 20px;

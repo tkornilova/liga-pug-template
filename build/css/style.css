@@ -601,6 +601,7 @@ button,
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 .footer__text {
   color: #ffffff;
