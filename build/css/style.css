@@ -1741,14 +1741,14 @@ button,
   color: inherit;
 }
 .title--h1 {
-  font-size: 52px;
-  line-height: 54px;
+  font-size: 40px;
+  line-height: 44px;
   text-transform: uppercase;
 }
 @media (max-width: 1023px) {
   .title--h1 {
     font-size: 36px;
-    line-height: 40px;
+    line-height: 38px;
   }
 }
 @media (max-width: 767px) {
@@ -1758,13 +1758,14 @@ button,
   }
 }
 .title--h2 {
-  font-size: 44px;
-  line-height: 48px;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 5px;
 }
 @media (max-width: 1023px) {
   .title--h2 {
-    font-size: 30px;
-    line-height: 32px;
+    font-size: 26px;
+    line-height: 30px;
   }
 }
 

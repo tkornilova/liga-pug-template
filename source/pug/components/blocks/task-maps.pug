@@ -6,7 +6,7 @@ mixin task-maps(options = {})
 
   .task-maps&attributes(attributes)
     .container
-      +title({tag: 'h2', text: title})
+      +title({tag: 'h2', text: title}).title--h2
       ul.task-maps__tasks
         each task in tasks
           li.task-maps__task
