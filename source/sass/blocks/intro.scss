@@ -32,8 +32,20 @@
   &__link {
     font-size: 28px;
     line-height: 30px;
+    color: $color-onion;
 
+    transition: color $trans-default;
     position: relative;
+
+    @include hover-focus {
+      color: $color-radical-red;
+      outline: none;
+    }
+
+    @include active {
+      color: $color-radical-red;
+      outline: none;
+    }
 
     &::after {
       content: '';
@@ -46,9 +58,9 @@
       width: 0;
       height: 2px;
 
-      background-color: $color-default-black;
+      background-color: $color-radical-red;
 
-      transition: width $trans-default;
+      transition: width $trans-default-05;
     }
 
     &:hover,

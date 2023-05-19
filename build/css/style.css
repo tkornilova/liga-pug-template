@@ -1964,7 +1964,25 @@ button,
 .intro__link {
   font-size: 28px;
   line-height: 30px;
+  color: #4b442f;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
   position: relative;
+}
+@media (hover: hover) {
+  .intro__link:hover:not(.focus-visible) {
+    color: #fb4273;
+    outline: none;
+  }
+}
+.intro__link.focus-visible:focus {
+  color: #fb4273;
+  outline: none;
+}
+.intro__link.focus-visible:active {
+  color: #fb4273;
+  outline: none;
 }
 .intro__link::after {
   content: "";
@@ -1974,10 +1992,10 @@ button,
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #000000;
-  -webkit-transition: width 0.3s ease;
-  -o-transition: width 0.3s ease;
-  transition: width 0.3s ease;
+  background-color: #fb4273;
+  -webkit-transition: width 0.5s ease;
+  -o-transition: width 0.5s ease;
+  transition: width 0.5s ease;
 }
 .intro__link:hover::after, .intro__link:focus::after, .intro__link:active::after {
   width: 100%;
