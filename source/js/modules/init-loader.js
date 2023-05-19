@@ -2,5 +2,9 @@
 export const initLoader = () => {
   const loader = document.querySelector('.loader');
 
+  if (!loader) {
+    return;
+  }
+
   loader.classList.add('hidden');
 };
