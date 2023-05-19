@@ -8,6 +8,7 @@ import {getMapData} from './modules/maps/init-maps';
 import {initLoader} from './modules/init-loader';
 import {initIntroAnimation} from './modules/init-intro-animation';
 import {initSliderAnimation} from './modules/init-slider-animation';
+import {initParalaxAnimation} from './modules/init-paralax-animation';
 
 // ---------------------------------
 
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   setTimeout(initLoader, 1700);
   initIntroAnimation();
   initSliderAnimation();
+  initParalaxAnimation();
   // Убирает проблемы с vh на iOS
   iosVhFix();
 

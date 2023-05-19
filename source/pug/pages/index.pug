@@ -15,7 +15,7 @@ block variables
         text: "Меню",
       },
       {
-        href: "#loader-task",
+        href: "#loader",
         text: "Лоадер",
       },
       {
@@ -27,11 +27,11 @@ block variables
         text: "Появление блоков",
       },
       {
-        href: "#",
+        href: "#paralax",
         text: "Паралакс",
       },
       {
-        href: "#",
+        href: "#slider",
         text: "Слайдер по скроллу",
       },
     ]
@@ -72,9 +72,11 @@ block main
     +page-content()
       +page-section().page-section--no-padding-top
         +intro(links)
-      +page-section()
+      +page-section()(id='#loader')
         +loader-task()
-      +page-section()
+      +page-section()(id='#paralax')
+        +paralax-task()
+      +page-section()(id='#slider')
         +slider-task(slides)
 
 

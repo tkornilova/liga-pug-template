@@ -49,17 +49,17 @@
                 <h1 class="title title--h2">Перейти к разделу:</h1>
                 <ul class="intro__list">
                   <li class="intro__item"><a class="intro__link" href="#" aria-label="Перейти к разделу">Меню</a></li>
-                  <li class="intro__item"><a class="intro__link" href="#loader-task" aria-label="Перейти к разделу">Лоадер</a></li>
+                  <li class="intro__item"><a class="intro__link" href="#loader" aria-label="Перейти к разделу">Лоадер</a></li>
                   <li class="intro__item"><a class="intro__link" href="#" aria-label="Перейти к разделу">Сборка первого экрана</a></li>
                   <li class="intro__item"><a class="intro__link" href="#" aria-label="Перейти к разделу">Появление блоков</a></li>
-                  <li class="intro__item"><a class="intro__link" href="#" aria-label="Перейти к разделу">Паралакс</a></li>
-                  <li class="intro__item"><a class="intro__link" href="#" aria-label="Перейти к разделу">Слайдер по скроллу</a></li>
+                  <li class="intro__item"><a class="intro__link" href="#paralax" aria-label="Перейти к разделу">Паралакс</a></li>
+                  <li class="intro__item"><a class="intro__link" href="#slider" aria-label="Перейти к разделу">Слайдер по скроллу</a></li>
                 </ul>
               </div>
             </div>
           </section>
-          <section class="page-section">
-            <div class="loader-task" id="#loader-task">
+          <section class="page-section" id="#loader">
+            <div class="loader-task">
               <div class="container">
                 <div class="loader-task__wrapper">
                   <h2 class="title title--h3">Лоадер</h2>
@@ -68,7 +68,33 @@
               </div>
             </div>
           </section>
-          <section class="page-section">
+          <section class="page-section" id="#paralax">
+            <div class="paralax-task">
+              <div class="container">
+                <h2 class="title title--h3">Паралакс</h2>
+                <div class="paralax-translate">
+                  <div class="paralax-translate__item" data-paralax-direction="bottom">
+                    <p class="paralax-translate__text">Я еду вниз</p>
+                  </div>
+                  <div class="paralax-translate__item" data-paralax-direction="top">
+                    <p class="paralax-translate__text">А я - наверх</p>
+                  </div>
+                </div>
+                <div class="paralax-scale">
+                  <div class="paralax-scale__item" data-paralax="scale">
+                    <p class="paralax-scale__text">Я появляюсь с увеличением</p>
+                  </div>
+                  <div class="paralax-scale__item" data-paralax="scale">
+                    <p class="paralax-scale__text">Я тоже, но попозже</p>
+                  </div>
+                  <div class="paralax-scale__item" data-paralax="scale">
+                    <p class="paralax-scale__text">А при скролле обратно мы пропадем</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page-section" id="#slider">
             <div class="slider-task">
               <div class="container">
                 <div class="slider-task__wrapper">
