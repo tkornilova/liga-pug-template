@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   // Инициализирует загрузочный экран при прогрузке страницы
-  initLoader();
+  setTimeout(initLoader, 2000);
   // Инициализирует анимацию интро
   initIntroAnimation();
   // Инициализирует слайдера
