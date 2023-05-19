@@ -1,14 +1,23 @@
 .loader {
-  width: 100%;
+  width: 100vw;
   height: 100%;
 
   position: absolute;
   top: 0;
   left: 0;
 
-  background-color: $color-golden-glow;
+  background-color: $color-sharm;
+  background-image: url('../../img/content/loader-bg.png');
+  background-repeat: no-repeat;
+  background-size: 500px auto;
+  background-position: 50% 500px;
 
   z-index: 100;
+
+  @include vp-1023 {
+    background-size: 300px auto;
+    background-position: 50% 300px;
+  }
 
   &.hidden {
     display: none;
@@ -20,14 +29,10 @@
     align-items: center;
     justify-content: center;
 
-    margin-top: 18%;
+    margin-top: 100px;
 
     @include vp-1023 {
-      margin-top: 28%;
-    }
-
-    @include vp-767 {
-      margin-top: 38%;
+      margin-top: 65px;
     }
   }
 
@@ -36,20 +41,22 @@
     height: 200px;
 
     border-radius: 50%;
-    border: 20px solid $color-radical-red;
-    border-top: 20px solid $color-default-white;
+    border: 20px solid $color-pattens-blue;
+    border-top: 20px solid $color-transparent;
 
     animation: loader 3s infinite linear;
 
-    margin: 0 0 130px 70px;
-  }
+    margin: 0;
 
-  &__text {
-    font-size: 38px;
-    line-height: 40px;
-    font-weight: 700;
-    color: $color-radical-red;
-    text-align: center;
+    z-index: 101;
+
+    @include vp-1023 {
+      width: 120px;
+      height: 120px;
+
+      border: 15px solid $color-pattens-blue;
+      border-top: 15px solid $color-transparent;
+    }
   }
 }
 

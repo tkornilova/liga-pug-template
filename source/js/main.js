@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   // Инициализирует загрузочный экран при прогрузке страницы
-  setTimeout(initLoader, 1700);
+  initLoader();
   initIntroAnimation();
   initSliderAnimation();
   initParalaxAnimation();
