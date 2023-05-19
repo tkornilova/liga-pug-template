@@ -23,7 +23,7 @@ block variables
         text: "Сборка первого экрана",
       },
       {
-        href: "#",
+        href: "#show-block",
         text: "Появление блоков",
       },
       {
@@ -33,6 +33,24 @@ block variables
       {
         href: "#slider",
         text: "Слайдер по скроллу",
+      },
+    ]
+
+    const animals = [
+      {
+        name: 'show-block-1'
+      },
+      {
+        name: 'show-block-2'
+      },
+      {
+        name: 'show-block-3'
+      },
+      {
+        name: 'show-block-4'
+      },
+      {
+        name: 'show-block-5'
       },
     ]
 
@@ -74,6 +92,8 @@ block main
         +intro(links)
       +page-section()(id='loader')
         +loader-task()
+      +page-section()(id='show-block')
+        +show-block-task(animals)
       +page-section()(id='paralax')
         +paralax-task()
       +page-section()(id='slider')

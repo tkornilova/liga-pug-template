@@ -1,0 +1,7 @@
+mixin show-block(data = [])
+  .show-block&attributes(attributes)
+    p.show-block__text ZOO
+    ul.show-block__list
+      each block in data
+        li.show-block__item(data-animation)
+          +img('content', block.name, 'png', 50, 50, 'Картинка животного')

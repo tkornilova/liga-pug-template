@@ -1,0 +1,7 @@
+.show-block-task {
+  padding: 0 0 60px;
+
+  @include vp-1439 {
+    padding: 0 0 48px;
+  }
+}

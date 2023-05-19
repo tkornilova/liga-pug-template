@@ -9,6 +9,7 @@ import {initLoader} from './modules/init-loader';
 import {initIntroAnimation} from './modules/init-intro-animation';
 import {initSliderAnimation} from './modules/init-slider-animation';
 import {initParalaxAnimation} from './modules/init-paralax-animation';
+import {initShowBlockAnimation} from './modules/init-show-block-animation';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initIntroAnimation();
   // Инициализирует слайдера
   initSliderAnimation();
+  initShowBlockAnimation();
   // Инициализирует анимацию паралакса
   initParalaxAnimation();
   // Убирает проблемы с vh на iOS

@@ -1,0 +1,5 @@
+mixin show-block-task(data)
+  .show-block-task&attributes(attributes)
+    .container
+      +title({tag: 'h2', text: 'Появление блоков'}).title--h2
+      +show-block(data)
