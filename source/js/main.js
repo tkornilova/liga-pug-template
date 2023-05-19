@@ -19,8 +19,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Инициализирует загрузочный экран при прогрузке страницы
   initLoader();
+  // Инициализирует анимацию интро
   initIntroAnimation();
+  // Инициализирует слайдера
   initSliderAnimation();
+  // Инициализирует анимацию паралакса
   initParalaxAnimation();
   // Убирает проблемы с vh на iOS
   iosVhFix();
