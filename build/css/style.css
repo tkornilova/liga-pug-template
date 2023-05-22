@@ -683,7 +683,7 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #473439;
   z-index: 2;
 }
 .footer__text {
