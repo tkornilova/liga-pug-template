@@ -4,6 +4,5 @@ export const initMenu = () => {
 
   menuButton.addEventListener('click', () => {
     header.classList.toggle('opened');
-    console.log('click');
   });
 };
