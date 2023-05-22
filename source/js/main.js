@@ -10,6 +10,7 @@ import {initIntroAnimation} from './modules/init-intro-animation';
 import {initSliderAnimation} from './modules/init-slider-animation';
 import {initParalaxAnimation} from './modules/init-paralax-animation';
 import {initShowBlockAnimation} from './modules/init-show-block-animation';
+import {initMenu} from './modules/init-menu';
 
 // ---------------------------------
 
@@ -29,6 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
   initParalaxAnimation();
   // Убирает проблемы с vh на iOS
   iosVhFix();
+  // Инициализирует открытие/закрытие меню
+  initMenu();
 
 
   // Modules

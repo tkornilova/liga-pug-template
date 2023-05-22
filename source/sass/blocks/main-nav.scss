@@ -1,27 +1,109 @@
 .main-nav {
-  &__list {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
+  width: 100%;
 
+  &__wrapper {
+    display: none;
+  }
+
+  &__list {
+    width: 100%;
     list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 0;
+    margin: 0;
   }
 
   &__item {
-    margin-right: 20px;
+    margin: 0 0 20px;
   }
 
   &__link {
+    font-size: 30px;
+    line-height: 34px;
     color: $color-default-white;
 
-    &.is-active {
-      opacity: 0.6;
+    position: relative;
+
+    &::after {
+      content: '';
+
+      display: block;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+
+      width: 0;
+      height: 2px;
+
+      background-color: $color-default-white;
+
+      transition: width $trans-default-05;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &::after {
+        width: 100%;
+      }
     }
   }
 
   &__toggle {
-    display: none;
+    width: 40px;
+    height: 40px;
+
+    display: block;
+
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+    transition: opacity $trans-default;
+    position: relative;
+
+    padding: 10px;
+    margin: 0 0 0 auto;
+
+    &::after {
+      content: url('../../img/sprite/icon-burger.svg');
+      width: 40px;
+      height: 40px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+
+    @include active {
+      opacity: 0.7;
+    }
+  }
+}
+
+.header.opened {
+  & .main-nav {
+    height: 100vh;
+  }
+  & .main-nav__toggle::after {
+    content: url('../../img/sprite/icon-close.svg');
+  }
+
+  & .main-nav__wrapper {
+    display: block;
+    align-self: flex-start;
+
+    padding: 40px 0;
   }
 }
