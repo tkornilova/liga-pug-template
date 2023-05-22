@@ -2,7 +2,30 @@
   width: 100%;
 
   &__wrapper {
-    display: none;
+    max-width: 1920px;
+
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    right: 0;
+
+    background-color: $color-cab-sav;
+    transition: top $trans-default-05;
+
+    padding: 100px 40px;
+    margin: 0 auto;
+
+    @include vp-1439 {
+      padding: 60px 32px;
+    }
+
+    @include vp-1023 {
+      padding: 60px 24px;
+    }
+
+    @include vp-767 {
+      padding: 60px 16px;
+    }
   }
 
   &__list {
@@ -66,6 +89,8 @@
     transition: opacity $trans-default;
     position: relative;
 
+    z-index: 10;
+
     padding: 10px;
     margin: 0 0 0 auto;
 
@@ -93,17 +118,11 @@
 }
 
 .header.opened {
-  & .main-nav {
-    height: 100vh;
-  }
   & .main-nav__toggle::after {
     content: url('../../img/sprite/icon-close.svg');
   }
 
   & .main-nav__wrapper {
-    display: block;
-    align-self: flex-start;
-
-    padding: 40px 0;
+    top: 0;
   }
 }
