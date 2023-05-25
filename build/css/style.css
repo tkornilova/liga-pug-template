@@ -578,7 +578,6 @@ button,
   width: 100%;
 }
 .main-nav__wrapper {
-  max-width: 1920px;
   position: absolute;
   top: -1000px;
   left: 0;
@@ -606,7 +605,7 @@ button,
   }
 }
 .main-nav__list {
-  width: 100%;
+  max-width: 1920px;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -619,7 +618,7 @@ button,
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 .main-nav__item {
   margin: 0 0 20px;
